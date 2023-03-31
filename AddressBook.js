@@ -111,9 +111,16 @@ let addressBook = new AddressBook("Tanuja", "Chaugule", "NaigaonEast", "Vasai", 
 console.log(addressBook.toString());
 let addressBook1 = new AddressBook("Priya", "Thakur", "Math", "Vengurle", "Maharashtra", 413308, 6715324562, "Priya@ab.dgf.df");
 console.log(addressBook1.toString());
+//UC2
 try {
-    addressBook1.lastName = "th";
+    addressBook1.setfirstName = "pr";
     console.log(addressBook1.toString());
 } catch (e) {
     console.error(e);
 }
+//UC3
+let addressBook2 = new AddressBook("Tanmay", "Chaugule", "Terdal", "Bijapur", "Karnatka", 586205, 9028363759,"tanmaychaugule05@gmail.com",);
+let addressBookArray= new Array();
+addressBookArray.push(addressBook1);
+addressBookArray.push(addressBook2);
+console.log("\nNew Contact Added to Array " +addressBookArray);
