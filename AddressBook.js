@@ -118,9 +118,30 @@ try {
 } catch (e) {
     console.error(e);
 }
+
 //UC3
-let addressBook2 = new AddressBook("Tanmay", "Chaugule", "Terdal", "Bijapur", "Karnatka", 586205, 9028363759,"tanmaychaugule05@gmail.com",);
+let addressBook2 = new AddressBook("Tanmay", "Chaugule", "Terdal", "Bijapur", "Karnataka", 435657, 9028363759,"tanmaychaugule55@Sgmail.com",);
 let addressBookArray= new Array();
+addressBookArray.push(addressBook);
 addressBookArray.push(addressBook1);
 addressBookArray.push(addressBook2);
 console.log("\nNew Contact Added to Array " +addressBookArray);
+
+//UC4
+let obj = addressBookArray.find((a) => a.firstName === 'Chaugule');
+if (obj != undefined) {
+  addressBookArray.pop();
+  obj.setFirstName('Shubham');
+  obj.setLastName('Singh');
+  obj.setAddress('Karnataka');
+  obj.setCity('Benguluru');
+  obj.setState('Karanataka');
+  obj.setZip(123456);
+  obj.setPhone(345678912);
+  obj.setEmail('shubhamsingh12@gmail.com');
+  addressBookArray.push(obj);
+  addressBookArray.forEach((a) => console.log(a.toString()));
+} else {
+  console.log('Not found');
+}
+
