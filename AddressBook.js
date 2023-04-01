@@ -169,3 +169,7 @@ addressBookArray.forEach((obj) => {
   addressBookArray.forEach((obj) => {
     if (obj.state === 'Maharashtra') console.log(obj.toString());
   });
+
+  //UC9 view person on city or state
+let persons = addressBookArray.map((obj) => `${obj.city},${obj.state}, ${obj.firstName}`);
+console.log(persons);
