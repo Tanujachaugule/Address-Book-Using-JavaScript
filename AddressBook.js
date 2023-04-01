@@ -183,3 +183,11 @@ function countByState(state) {
 }
 console.log("number of Person in city " +countByCity("Vasai"));
 console.log("number of Person in state " +countByState("Maharashtra"));
+
+//UC11 
+function sortByName() {
+    addressBookArray.sort((a, b) => a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase()));
+    console.log("Sorted Array : ")
+    addressBookArray.forEach(contact => console.log(contact.toString()));
+}
+ sortByName();
