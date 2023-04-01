@@ -158,3 +158,7 @@ let count = addressBookArray.reduce(function count(c) {
     return c + 1;
   }, 0);
   console.log(count);
+  //UC7 check duplicate entry
+let newName = 'Tanuja';
+let bool = addressBookArray.find((obj) => obj.firstName === newName);
+console.log(bool);
