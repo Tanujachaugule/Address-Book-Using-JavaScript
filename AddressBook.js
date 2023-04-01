@@ -144,4 +144,12 @@ if (obj != undefined) {
 } else {
   console.log('Not found');
 }
-
+//UC5
+let objToDelete = addressBookArray.find((a) => a.firstName === 'Tanmay');
+if (objToDelete != undefined) {
+  addressBookArray.pop();
+  console.log('Person found and record deleted');
+  addressBookArray.forEach((a) => console.log(a.toString()));
+} else {
+  console.log('Not found');
+}
