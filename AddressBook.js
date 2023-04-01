@@ -162,3 +162,10 @@ let count = addressBookArray.reduce(function count(c) {
 let newName = 'Tanuja';
 let bool = addressBookArray.find((obj) => obj.firstName === newName);
 console.log(bool);
+//UC8  particular city or state
+addressBookArray.forEach((obj) => {
+    if (obj.city === 'Vasai') console.log(obj.toString());
+  });
+  addressBookArray.forEach((obj) => {
+    if (obj.state === 'Maharashtra') console.log(obj.toString());
+  });
