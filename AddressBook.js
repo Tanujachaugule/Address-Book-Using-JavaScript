@@ -169,7 +169,17 @@ addressBookArray.forEach((obj) => {
   addressBookArray.forEach((obj) => {
     if (obj.state === 'Maharashtra') console.log(obj.toString());
   });
-
+   
   //UC9 view person on city or state
 let persons = addressBookArray.map((obj) => `${obj.city},${obj.state}, ${obj.firstName}`);
 console.log(persons);
+ 
+//UC10
+function countByCity(city) {
+    return addressBookArray.filter(contact => contact.city == city).reduce((count, contact) => count += 1, 0);
+}
+function countByState(state) {
+    return addressBookArray.filter(contact => contact.state == state).reduce((count, contact) => count += 1, 0)
+}
+console.log("number of Person in city " +countByCity("Vasai"));
+console.log("number of Person in state " +countByState("Maharashtra"));
